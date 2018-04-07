@@ -16,9 +16,10 @@ Course information:
 Assignment information:
 --------------------------------------------------------------------------------
     Author:             Dr. Zhibo Zhang, Professor
+    E-mail:             Zhibo.Zhang@UMBC.edu
+    Date:               2017-01-30
     Number:             01
     Name:               Homework 1
-    Due:                2018-02-13
     Available points:   100
     Grade percentage:   5.71%
     
@@ -27,8 +28,9 @@ Assignment information:
 Solutions information:
 --------------------------------------------------------------------------------
     Author:             Erick Edward Shepherd, Teaching Assistant
-    Date:               2018-04-06
-
+    E-mail:             ErickShepherd@UMBC.edu
+    Date:               2018-04-07
+    
 Copyright information:
 --------------------------------------------------------------------------------
     This document contains the intellectual property of both Dr. Zhibo Zhang and
@@ -40,8 +42,15 @@ Copyright information:
     educational purposes, but without any warranty; without even the implied 
     warranty of merchantability or fitness for a particular purpose.
     
-    Redistribution of this program is prohibited without written permission from
-    both copyright holders: Namely, Dr. Zhibo Zhang and Erick Edward Shepherd.
+    The intended audience of the publication of this document is the students
+    enrolled in the Introduction to Computational Physics (PHYS 220) course 
+    taught Dr. Zhibo Zhang at the University of Maryland, Baltimore County 
+    (UMBC). 
+    
+    All of the contents of this document are protected from copying under U.S. 
+    and international copyright laws and treatises. Any unauthorized copying, 
+    alteration, distribution, transmission, performance, display or other use of 
+    this material is prohibited.
 """
 
 # Future module imports for Python 2-3 compatibility.

@@ -16,9 +16,10 @@ Course information:
 Assignment information:
 --------------------------------------------------------------------------------
     Author:             Dr. Zhibo Zhang, Professor
+    E-mail:             Zhibo.Zhang@UMBC.edu
+    Date:               2017-01-30
     Number:             02
     Name:               Homework 2
-    Due:                2018-02-27
     Available points:   90
     Grade percentage:   5.71%
     
@@ -27,8 +28,9 @@ Assignment information:
 Solutions information:
 --------------------------------------------------------------------------------
     Author:             Erick Edward Shepherd, Teaching Assistant
+    E-mail:             ErickShepherd@UMBC.edu
     Date:               2018-04-07
-
+    
 Copyright information:
 --------------------------------------------------------------------------------
     This document contains the intellectual property of both Dr. Zhibo Zhang and
@@ -40,17 +42,27 @@ Copyright information:
     educational purposes, but without any warranty; without even the implied 
     warranty of merchantability or fitness for a particular purpose.
     
-    Redistribution of this program is prohibited without written permission from
-    both copyright holders, Dr. Zhibo Zhang and Erick Edward Shepherd.
+    The intended audience of the publication of this document is the students
+    enrolled in the Introduction to Computational Physics (PHYS 220) course 
+    taught Dr. Zhibo Zhang at the University of Maryland, Baltimore County 
+    (UMBC). 
+    
+    All of the contents of this document are protected from copying under U.S. 
+    and international copyright laws and treatises. Any unauthorized copying, 
+    alteration, distribution, transmission, performance, display or other use of 
+    this material is prohibited.
 """
 
 # Future module imports for Python 2-3 compatibility.
 from __future__ import division, print_function
 
+# Standard library imports.
+import datetime
+
 # Third party imports.
 import matplotlib.pyplot as plt
 import numpy as np
-from netCDF4    import Dataset
+from netCDF4 import Dataset
 
 def load_data_from_nc():
     
@@ -73,7 +85,7 @@ def load_data_from_nc():
             Shape: (829,) -> (time,)
             Range: 1297320.0 <= time <= 1902192.0
             Units: Hours since 1800-01-01 00:00:0.0 (UTC)
-            Start: 1947-01-01 00:00:0.0 (UTC)
+            Start: 1948-01-01 00:00:0.0 (UTC)
             End:   2017-01-01 00:00:0.0 (UTC)
             Notes: Each time stamp is spaced one month apart.
             
@@ -113,7 +125,7 @@ def load_data_from_npz():
             Shape: (829,) -> (time,)
             Range: 1297320.0 <= time <= 1902192.0
             Units: Hours since 1800-01-01 00:00:0.0 (UTC)
-            Start: 1947-01-01 00:00:0.0 (UTC)
+            Start: 1948-01-01 00:00:0.0 (UTC)
             End:   2017-01-01 00:00:0.0 (UTC)
             Notes: Each time stamp is spaced one month apart.
             
@@ -155,21 +167,47 @@ def air_temp():
     #   Reshape the air temperature array into a 4-dimentional array of shape 
     #   (69, 12, 73, 144) -> (years, months, latitudes, longitudes). Discard the
     #   last time value for the month of January, 2017.
+    #
+    #   Author's note:
+    #       Dr. Zhang originally indicated in the document that the shape was to
+    #       be (12, 69, 73, 144); however, he later corrected this in class.
     
-    N_years      = times[0:-1].size // 12
+    # Solution:
+    # Convert timestamps to an ndarray of datetime objects.
+    reference_date = datetime.datetime(1800, 1, 1)
+    
+    dates  = [reference_date + datetime.timedelta(hours = x) for x in times]
+    dates  = np.asarray(dates[:-1]) # Discard 2017-01-01 from the time array.
+    years  = np.asarray(list(set(date.year for date in dates)))
+    months = np.arange(1, 12 + 1)
+    
+    get_month_name = lambda index: datetime.date(2000, index, 1).strftime("%B")
+    month_strings  = [get_month_name(month)[0:3] for month in months]
+        
+    # Extract the starting and ending years.
+    start_year = years[0]
+    end_year   = years[-1]
+    
+    # Extract the number of years, latitudes, and longitudes for the new shape.
+    N_years      = years.size
     N_latitudes  = latitudes.size
     N_longitudes = longitudes.size
-    
-    end_year   = 2016
-    start_year = end_year - N_years
-    
+        
+    # Reshape the air temperature array.
+    #
+    # Author's note:
+    #   Many students expressed some confusion about this exercise. Since the 
+    #   time stamps are given on the first of every month, the objective of this
+    #   exercise was to reshape the time dimension of the air temperature array
+    #   from 1 group of 829 months to 69 groups of 12 months each.
+    #    - Erick Shepherd
     old_shape        = air_temperatures.shape
-    new_shape        = (12, N_years, N_latitudes, N_longitudes)
-    air_temperatures = air_temperatures[0:-1, :, :]
-    air_temperatures = air_temperatures.reshape(new_shape, order = "F")
+    new_shape        = (N_years, 12, N_latitudes, N_longitudes)
+    air_temperatures = air_temperatures[0:-1, :, :].reshape(new_shape)
     
+    # Test of solution:
     output_fields = [old_shape, air_temperatures.shape]
-    output_string = "Air temperature array reshaped from {} to {}.\n"
+    output_string = "Air temperature array reshaped from {} to {}."
     
     print("Problem 1.1:")
     print(output_string.format(*output_fields))
@@ -186,20 +224,72 @@ def air_temp():
     #   yearly average of the monthly global average temperatures.
     #    - Erick Shepherd
     
+    # Let "annual mean global mean temperatures" be denoted as "AMGMT".
+    AMGMT = air_temperatures.mean(axis = (1, 2, 3))
     
+    find_upper_limit = lambda a, b, delta: a + (b - a) // delta * delta + delta
+    
+    x_delta       = 10
+    x_lower_limit = start_year
+    x_upper_limit = find_upper_limit(start_year, end_year, x_delta)
+    
+    decade_spaced_labels = np.arange(x_lower_limit, x_upper_limit + 1, x_delta)
+    
+    y_lower_limit = np.floor(np.min(AMGMT))
+    y_upper_limit = np.ceil(np.max(AMGMT))
+    
+    plt.figure()
+    plt.plot(years, AMGMT)
+    plt.title("Annual Mean Global Mean Temperature vs. Time")
+    plt.xlabel("Year",                fontsize = "large")
+    plt.ylabel("Temperature [$^oC$]", fontsize = "large")
+    plt.xticks(decade_spaced_labels)
+    plt.xlim(x_lower_limit, x_upper_limit)
+    plt.ylim(y_lower_limit, y_upper_limit)
+    plt.grid()
     
     # Problem 1.3:
     #   Derive and plot the 69-year averaged seasonal cycle of global mean 
     #   temperature.
     #
     # Author's note:
-    #   A season in this instance is defined as a three month span. Note that
+    #   Students expressed some confusion over this problem as well, as the way
+    #   it was asked is somewhat ambiguous. To clarify, the seasonal cycle may
+    #   be shown through either the monthly mean global mean temperatures or by
+    #   taking it a step further and computing the three month mean global mean
+    #   temperatures. Both approaches are shown.
+    #   
+    #   As an aside based on a mistake several students made, please note that
     #   conventional seasonal names (i.e. Spring, Summer, Autumn, Winter) are 
-    #   opposite in the Northern and Southern hemispheres.
+    #   opposite in the Northern and Southern hemispheres, and so using that
+    #   naming convention is ambiguous on a global scale.
     #    - Erick Shepherd
     
+    # Let "seasonal mean global mean temperatures" be denoted by "SMGMT".
+    SMGMT = air_temperatures.mean(axis = (0, 2, 3))
+    
+    # Let "three month mean global mean temperatures" be denoted by "TMMGMT".
+    TMMGMT  = np.mean(SMGMT.reshape(-1, 3), axis = 1)
+    seasons = [season + 2 for season in months[0::3] - 1]
+
+    y_lower_limit = np.floor(np.min(SMGMT))
+    y_upper_limit = np.ceil(np.max(SMGMT))
+    
+    # Month values have 1 subtracted in order to index from 0.
+    plt.figure()
+    plt.plot(months - 1, SMGMT,  label = "Monthly")
+    plt.plot(seasons,    TMMGMT, label = "Seasonal", c = "r")
+    plt.title("69-year Averaged Seasonal Cycle of Global Mean Temperature")
+    plt.xlabel("Month",               fontsize = "large")
+    plt.ylabel("Temperature [$^oC$]", fontsize = "large")
+    plt.xticks(months - 1, month_strings)
+    plt.xlim(months[0] - 1, months[-1] - 1)
+    plt.ylim(y_lower_limit, y_upper_limit)
+    plt.legend()
+    plt.grid()
+    
     # Problem 1.4:
-    #   Derive and plot the mean temperatures of the Summer months of the United
+    #   Derive and plot the temperatures of the Summer months of the United 
     #   States (June, July, August) over the last 69 years.
     #
     # Author's notes:
@@ -215,12 +305,49 @@ def air_temp():
     #   to -180 degrees from the prime meridian as opposed to the conventional 
     #   -180 to 180 degrees relative to the prime meridian.
     #    - Erick Shepherd
-    northern_boundary =   49.384472
-    southern_boundary =   24.520833
-    eastern_boundary  =  -66.947028 + 180
-    western_boundary  = -124.771694 + 180
     
+    northernmost =   49.384472
+    southernmost =   24.520833
+    easternmost  =  -66.947028 + 180
+    westernmost  = -124.771694 + 180
     
+    # Month values have 1 subtracted in order to index from 0.
+    summer_mask    = np.arange(5, 8)
+    latitude_mask  = (southernmost <= latitudes)  & (latitudes  <= northernmost)
+    longitude_mask = (westernmost  <= longitudes) & (longitudes <= easternmost)
+    
+    us_latitudes    = latitudes[latitude_mask]
+    us_longitudes   = longitudes[longitude_mask]
+    N_us_latitudes  = us_latitudes.size
+    N_us_longitudes = us_longitudes.size
+    
+    # Let "U.S. mean summer temeratures" be denoted by "USMST".
+    USMST     = air_temperatures[:, summer_mask]
+    USMST     = USMST[:, :, latitude_mask]
+    USMST     = USMST[:, :, :, longitude_mask]
+    new_shape = (N_years * summer_mask.size, N_us_latitudes, N_us_longitudes)
+    USMST     = USMST.reshape(new_shape).mean(axis = (1, 2))
+    
+    summers = [month for month in range(years.size * summer_mask.size)]
+        
+    x_delta       = 30
+    x_lower_limit = summers[0]
+    x_upper_limit = find_upper_limit(summers[0], summers[-1], x_delta)
+    
+    y_lower_limit = np.floor(np.min(USMST))
+    y_upper_limit = np.ceil(np.max(USMST))
+    
+    x_ticks = summers[0::x_delta] + [x_upper_limit]
+    
+    plt.figure()
+    plt.plot(summers, USMST)
+    plt.title("Summertime Temperatures of the U.S. over 69 Years")
+    plt.xlabel("Summer Month",        fontsize = "large")
+    plt.ylabel("Temperature [$^oC$]", fontsize = "large")
+    plt.xticks(x_ticks, decade_spaced_labels)
+    plt.xlim(x_lower_limit, x_upper_limit)
+    plt.ylim(y_lower_limit, y_upper_limit)
+    plt.grid()
 
 """
 Problem information:
@@ -239,16 +366,17 @@ def line_plot():
     cosine = np.cos(x)
     sine   = np.sin(x)
     
-    xlabels = [r'$-\pi$', r'$-\pi/2$', r'$0$', r'$\pi/2$', r'$\pi$']
+    x_labels = [r'$-\pi$', r'$-\pi/2$', r'$0$', r'$\pi/2$', r'$\pi$']
     
+    plt.figure()
     plt.plot(x, sine,   color = "red",  label = "sin")
     plt.plot(x, cosine, color = "blue", label = "cos")
     plt.xlabel(r"$x$")
     plt.ylabel(r"$y$")
+    plt.xticks(np.arange(-np.pi, np.pi + np.pi / 2, np.pi / 2), x_labels)
+    plt.yticks(np.arange(-1.0, 1.0 + 0.5, 0.5))
     plt.xlim(-np.pi, np.pi)
     plt.ylim(-1.0, 1.0)
-    plt.xticks(np.arange(-np.pi, np.pi + np.pi / 2, np.pi / 2), xlabels)
-    plt.yticks(np.arange(-1.0, 1.0 + 0.5, 0.5))
     plt.legend(loc = "upper left")
     plt.grid(linestyle = "dotted")
 
@@ -274,12 +402,12 @@ def scatter_plot():
     plt.figure()
     plt.scatter(T, RH1, c = "red",  marker = ".", s = 100, edgecolors = "none")
     plt.scatter(T, RH2, c = "blue", marker = ",", s = 20,  edgecolors = "none")
-    plt.annotate("data 1", xy = (30, 90), color = "red")
-    plt.annotate("data 2", xy = (30, 55), color = "blue")
-    plt.xlim(0, 35)
-    plt.ylim(0, 120)
     plt.xlabel(r"Temperature[$^oC$]",        fontsize = "large")
     plt.ylabel(r"Relative Humidity [$\%$] ", fontsize = "large")
+    plt.xlim(0, 35)
+    plt.ylim(0, 120)
+    plt.annotate("data 1", xy = (30, 90), color = "red")
+    plt.annotate("data 2", xy = (30, 55), color = "blue")
     plt.grid(linestyle = "dotted")
 
 """
@@ -310,8 +438,8 @@ def contourf_plot():
 if __name__ == "__main__":
     
     air_temp()
-    #line_plot()
-    #scatter_plot()
-    #contourf_plot()
+    line_plot()
+    scatter_plot()
+    contourf_plot()
     
     plt.show()
