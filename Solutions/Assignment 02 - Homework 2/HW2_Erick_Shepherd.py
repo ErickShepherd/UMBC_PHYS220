@@ -18,8 +18,8 @@ Assignment information:
     Author:             Dr. Zhibo Zhang, Professor
     E-mail:             Zhibo.Zhang@UMBC.edu
     Date:               2017-01-30
-    Number:             02
-    Name:               Homework 2
+    Assignment:         02
+    Assignment name:    Homework 2
     Available points:   90
     Grade percentage:   5.71%
     
