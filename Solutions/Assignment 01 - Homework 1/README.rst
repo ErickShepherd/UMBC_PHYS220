@@ -42,7 +42,7 @@ Problem 5 Sample Output:
 
     Problem 5:
     The reversal of the list [41, 83, 32, 92, 86, 46] is [46, 86, 92, 32, 83, 41].
-    The reversal of the string "Schrödinger" is "regnidörhcS".
+    The reversal of the string "Schrodinger" is "regnidorhcS".
 
 Problem 6 Sample Output:
 ========================

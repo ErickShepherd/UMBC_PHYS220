@@ -239,7 +239,7 @@ def list_reverse(x):
 
 # Test of solution:
 X = [randint(0, 100) for index in range(randint(1, 10))]
-Y = "Schrödinger"
+Y = "Schrodinger"
 output_fields_1 = [X, list_reverse(X)]
 output_fields_2 = [Y, list_reverse(Y)]
 output_string_1 = "The reversal of the list {} is {}."
