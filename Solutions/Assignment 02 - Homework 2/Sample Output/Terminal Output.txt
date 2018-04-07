@@ -1,0 +1,2 @@
+Problem 1.1:
+Air temperature array reshaped from (829, 73, 144) to (12, 69, 73, 144).
