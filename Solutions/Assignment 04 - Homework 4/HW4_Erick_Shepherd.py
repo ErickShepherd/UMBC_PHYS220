@@ -118,7 +118,7 @@ def question1():
     xlabel = r"Cloud Optical Thickness ($\tau$)"
     ylabel = r"Cloud Reflectance ($R$)"
         
-    plt.suptitle(r"{} vs. {}".format(xlabel, ylabel))
+    plt.suptitle(r"{} vs. {}".format(ylabel, xlabel))
     plt.title("Simulated with {} Photons".format(N_photons))
     plt.xlabel(xlabel, fontsize = "large")
     plt.ylabel(ylabel, fontsize = "large")
@@ -152,11 +152,11 @@ def question2():
         MDR_reflected = MCRT(COT, SSA, SZA, N_photons)["MDR reflected"]
         plt.hist(MDR_reflected, bins = 50, label = label, zorder = -index)
         
-    xlabel = r"Deepest Photon Depth (${\tau}^{*}$)"
+    xlabel = r"Deepest Depth Reached (${\tau}^{*}$)"
     ylabel = r"Cloud Reflectance ($R$)"
         
-    plt.suptitle(r"{} vs. {}".format(xlabel, ylabel))
-    plt.title("Simulated with {} Photons".format(N_photons))
+    plt.suptitle(r"{} vs. {}".format(ylabel, xlabel))
+    plt.title("Simulated with {:,} Photons".format(N_photons))
     plt.xlabel(xlabel, fontsize = "large")
     plt.ylabel(ylabel, fontsize = "large")
     plt.xlim(0, COT)
