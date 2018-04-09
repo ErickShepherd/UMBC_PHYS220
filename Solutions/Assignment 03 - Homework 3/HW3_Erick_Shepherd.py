@@ -90,13 +90,14 @@ direction = lambda: (-1) ** np.random.randint(0, 2)
 step      = lambda: round(dL * direction(), 4)
 path      = lambda: [step() if j > 0 else 0 for j in range(Ns + 1)]
 
+# The 1D spatial and temporal displacements of each walker at a given time step.
 X = np.asarray([np.cumsum(path()) for i in range(Nw)]).T
 t = np.arange(0, (Ns + 1) * dt)
 
 x_delta = 50 * dt # Time in seconds.
 
 y_delta = 100 / 1000 # Displacement in meters.
-y_bound = np.ceil(np.max(np.abs(X)) / y_delta) * y_delta
+y_limit = np.ceil(np.max(np.abs(X)) / y_delta) * y_delta
 
 plt.figure()
 plt.plot(t, X)
@@ -104,28 +105,34 @@ plt.title("Walker Displacement vs. Time")
 plt.xlabel(r"Time [$s$]",         fontsize = "large")
 plt.ylabel(r"Displacement [$m$]", fontsize = "large")
 plt.xticks(np.arange(0, t[-1] + x_delta, x_delta))
-plt.yticks(np.arange(-y_bound, y_bound + y_delta, y_delta))
+plt.yticks(np.arange(-y_limit, y_limit + y_delta, y_delta))
 plt.xlim(0, Ns)
-plt.ylim(-y_bound, y_bound)
+plt.ylim(-y_limit, y_limit)
 plt.grid()
-
 
 """
 Problem information:
 --------------------------------------------------------------------------------
     Problem:        2
-    Points:         10
+    Points:         20
     Weight:         1.00
-    Percentage:     10.00%
+    Percentage:     20.00%
     
-    Description:    The function  max_of_three() will only work for three 
-                    numbers, but suppose we have many more numbers, or suppose 
-                    we cannot tell in advance how many numbers there will be?  
-                    Write a function max_in_list() that takes a list of numbers 
-                    and returns the largest one.
+    Description:    Compute the mean displacement and the mean square 
+                    displacement of all walkers at each step. Then, in the same 
+                    figure, plot the mean displacement and the root mean square 
+                    (RMS) displacement.
 """
 
+X_mean = np.abs(np.mean(X, axis = 1))
+X_rms  = np.sqrt(np.mean(np.power(X, 2), axis = 1))
 
+plt.figure()
+plt.title("Displacement vs. Time")
+plt.plot(t, X_mean, c = "b", label = r"${\langle}{X}{\rangle}_i$")
+plt.plot(t, X_rms,  c = "k", label = r"$\sqrt{{\langle}{X}{\rangle}_i}$")
+plt.xlabel(r"Time [$s$]",         fontsize = "large")
+plt.ylabel(r"Displacement [$m$]", fontsize = "large")
 
 """
 Problem information:
@@ -135,16 +142,174 @@ Problem information:
     Weight:         1.00
     Percentage:     10.00%
     
-    Description:    Define two functions sum() and a function multiply() which
-                    respectively sum and multiply all numbers in a list of 
-                    numbers. For example, sum([1, 2, 3, 4]) should return 10, 
-                    and multiply([1, 2, 3, 4]) should return 24.
-                    
-    Author's notes: Be wary when implementing something like this in situations
-                    outside of the classroom; "sum" is a built-in function in
-                    Python, and defining another function by the same name
-                    will override the built-in function by that name in the
-                    scope in which it is defined. - Erick Shepherd
+    Description:    In the same figure as problem 2, show that the RMS 
+                    displacement is approximately the square root of 2Dt, where 
+                    D is the diffusion coefficient D = (dL)^2 / (2dt).
 """
+
+D = dL ** 2 / (2 * dt)
+X_analytical = np.sqrt(2 * D * t)
+
+X_series = np.concatenate((X_mean, X_rms, X_analytical))
+
+y_delta       = 10 / 1000 # Displacement in meters.
+y_lower_limit = np.floor(np.min(X_series) / y_delta) * y_delta
+y_upper_limit = np.ceil(np.max(X_series)  / y_delta) * y_delta
+
+plt.plot(t, X_analytical, c = "r", label = r"$\sqrt{2Dt}$")
+plt.xlim(np.min(t), np.max(t))
+plt.ylim(y_lower_limit, y_upper_limit)
+plt.legend()
+plt.grid()
+
+"""
+Problem information:
+--------------------------------------------------------------------------------
+    Problem:        4
+    Points:         20
+    Weight:         1.00
+    Percentage:     20.00%
+    
+    Description:    Compute the normalized number density function of walkers at
+                    each time step in the interval x to x + dx. See the file
+                    HW3_corrected.pdf for more information.
+    
+    
+"""
+
+# Let "experimental normalized number density function" be denoted by "ENNDF".
+def ENNDF(x = 0, t = 150, dx = 3 * dL):
+    
+    dNw = None
+    
+    # For a constant time t:
+    if isinstance(x, np.ndarray) and not isinstance(t, np.ndarray):
+        
+        dNw = np.zeros(x.size) # Walkers in the displacement interval.
+        
+        for index, position in enumerate(x):
+            
+            # Author's note:
+            #   dx is divided by 2 to ensure that the interval is symmetric 
+            #   about the position.
+            #    - Erick Shepherd
+            upper_bound = position + dx / 2
+            lower_bound = position - dx / 2
+            
+            interval = lambda Y: (lower_bound <= Y) & (Y <= upper_bound)
+            
+            Y = X[t]
+            
+            dNw[index] = Y[interval(Y)].size
+                
+    # For a constant position x:
+    elif not isinstance(x, np.ndarray) and isinstance(t, np.ndarray):
+       
+        # Author's note:
+        #   dx is divided by 2 to ensure that the interval is symmetric about x.
+        #    - Erick Shepherd
+        upper_bound = x + dx / 2
+        lower_bound = x - dx / 2
+
+        interval = lambda Y: (lower_bound <= Y) & (Y <= upper_bound)
+    
+        dNw = np.zeros(Ns + 1) # Walkers in the displacement interval.
+    
+        for step, time in enumerate(t):
+        
+            Y = X[step]
+            
+            dNw[step] = Y[interval(Y)].size
+                
+    # For invalid input:
+    else:
+        
+        raise ValueError("Either x must be an array and t must be a scalar," + \
+                         " or x must be a scalar and t must be an array.")
+    
+    P = dNw / Nw # The probability of finding a walker in the interval.
+    
+    return P
+
+"""
+Problem information:
+--------------------------------------------------------------------------------
+    Problem:        5
+    Points:         40
+    Weight:         1.00
+    Percentage:     40.00%
+    
+    Description:    Show that the normalized number density function from
+                    problem 4 agrees with the analytical solution of the 
+                    diffusion equation. You can plot both functions as either
+                    functions of time at a particular displacement or functions
+                    of displacement at a particular time.
+"""
+
+# Let "analytical normalized number density function" be denoted by "ANNDF".
+def ANNDF(x, t):
+    
+    P = np.exp((-x ** 2) / (4 * D * t)) / np.sqrt(4 * np.pi * D * t)
+    
+    return P
+
+dx = 3 * dL
+
+# Solution as a function of position:
+x_bound = np.ceil(np.max(np.abs(X)) / dx) * dx
+x       = np.round(np.arange(-x_bound, x_bound + dx, dx), 4)
+t       = 150
+
+# Let "position function normalization constant" be denoted by "PFNC".
+PFNC = np.max(ANNDF(x, 1))
+
+P_experimental = ENNDF(x, t, dx)
+P_analytical   = ANNDF(x, t) / PFNC
+
+P_series = np.concatenate((P_experimental, P_analytical))
+
+x_delta = 0.1
+x_limit = np.ceil(np.max(np.abs(x)) / x_delta) * x_delta
+
+y_delta       = 0.1
+y_upper_limit = np.ceil(np.max(P_series) / y_delta) * y_delta
+
+plt.figure()
+plt.plot(x, P_experimental, c = "k", label = "Experimental")
+plt.plot(x, P_analytical,   c = "r", label = "Analytical")
+plt.suptitle("Walker Number Density vs. Position")
+plt.title(r"$t={}$ s, $dx={}$ m".format(t, dx))
+plt.xlabel(r"Position [$m$]")
+plt.ylabel(r"Normalized Number Density")
+plt.xlim(-x_limit, x_limit)
+plt.ylim(0, y_upper_limit)
+plt.legend()
+plt.grid()
+
+# Solution as a function of time:
+x = 0
+t = np.arange(0, (Ns + 1) * dt)
+
+# Let "time function normalization constant" be denoted by "PFNC".
+TFNC = np.max(ANNDF(0, t[t != 0]))
+
+# Author's note:
+#   Masking the time dimension with t[t != 0] prevents division by zero in the 
+#   analytical solution.
+#    - Erick Shepherd
+P_experimental = ENNDF(x, t, dx)
+P_analytical   = ANNDF(x, t[t != 0]) / TFNC
+
+plt.figure()
+plt.plot(t,         P_experimental, c = "k", label = "Experimental")
+plt.plot(t[t != 0], P_analytical,   c = "r", label = "Analytical")
+plt.suptitle("Walker Number Density vs. Time")
+plt.title(r"$x={}$ m, $dx={}$ m".format(x, dx))
+plt.xlabel(r"Time [$s$]")
+plt.ylabel(r"Normalized Number Density")
+plt.xlim(t[0], t[-1])
+plt.ylim(0, 1)
+plt.legend()
+plt.grid()
 
 plt.show()
