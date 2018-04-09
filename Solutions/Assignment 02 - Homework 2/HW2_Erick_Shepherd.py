@@ -270,15 +270,15 @@ def air_temp():
     
     # Let "three month mean global mean temperatures" be denoted by "TMMGMT".
     TMMGMT  = np.mean(SMGMT.reshape(-1, 3), axis = 1)
-    seasons = [season + 2 for season in months[0::3] - 1]
+    seasons = months[0::3]
 
     y_lower_limit = np.floor(np.min(SMGMT))
     y_upper_limit = np.ceil(np.max(SMGMT))
     
     # Month values have 1 subtracted in order to index from 0.
     plt.figure()
-    plt.plot(months - 1, SMGMT,  label = "Monthly")
-    plt.plot(seasons,    TMMGMT, label = "Seasonal", c = "r")
+    plt.bar(seasons, TMMGMT, label = "Seasonal", width = 2, color = "red")
+    plt.plot(months - 1, SMGMT, label = "Monthly", linewidth = 2, c = "k")
     plt.title("69-year Averaged Seasonal Cycle of Global Mean Temperature")
     plt.xlabel("Month",               fontsize = "large")
     plt.ylabel("Temperature [$^oC$]", fontsize = "large")
