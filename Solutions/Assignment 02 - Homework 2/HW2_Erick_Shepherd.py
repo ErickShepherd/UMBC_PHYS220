@@ -23,7 +23,7 @@ Assignment information:
     Available points:   90
     Grade percentage:   5.71%
     
-    Description:        Python basics exercises.
+    Description:        Basic exercises with numpy as matplotlib.
     
 Solutions information:
 --------------------------------------------------------------------------------

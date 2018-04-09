@@ -346,13 +346,19 @@ def guess_the_number():
                 different_position += 1
             
         if guess != answer:
+            
             print("Incorrect!")
+            
             print("Right numbers in right positions: " + \
                   "{}".format(same_position))
+            
             print("Right numbers in wrong positions: " + \
                   "{}\n".format(different_position))
+            
             guess = ""
+            
         else:
+            
             print("Correct!")
             print("You won in {} moves.".format(guesses))
             

@@ -23,7 +23,8 @@ Assignment information:
     Available points:   100
     Grade percentage:   5.71%
     
-    Description:        Python basics exercises.
+    Description:        Simulating a simple 1-dimensional random walk (Brownian 
+                        motion) simulation using the Monte Carlo method.
     
 Solutions information:
 --------------------------------------------------------------------------------
