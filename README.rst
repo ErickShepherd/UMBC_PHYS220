@@ -32,9 +32,9 @@ Copyright
 Assignment Solutions
 ====================
 
- - `Homework 1`_
- - `Homework 2`_
- - `Homework 3`_
+- `Homework 1`_
+- `Homework 2`_
+- `Homework 3`_
 
     .. _`Homework 1`: https://github.com/ErickShepherd/UMBC_PHYS220/tree/master/Solutions/Assignment%2001%20-%20Homework%201
     .. _`Homework 2`: https://github.com/ErickShepherd/UMBC_PHYS220/tree/master/Solutions/Assignment%2002%20-%20Homework%202
