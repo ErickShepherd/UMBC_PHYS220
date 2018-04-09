@@ -45,12 +45,13 @@ Copyright information:
     The intended audience of the publication of this document is the students
     enrolled in the Introduction to Computational Physics (PHYS 220) course 
     taught Dr. Zhibo Zhang at the University of Maryland, Baltimore County 
-    (UMBC). 
+    (UMBC). Use of the contents of this repository by students of UMBC is 
+    restricted by the academic integrity policies and principles of UMBC.
     
     All of the contents of this document are protected from copying under U.S. 
     and international copyright laws and treatises. Any unauthorized copying, 
-    alteration, distribution, transmission, performance, display or other use of 
-    this material is prohibited.
+    alteration, distribution, transmission, performance, display, or other use 
+    of this material is prohibited.
 """
 
 # Future module imports for Python 2-3 compatibility.
