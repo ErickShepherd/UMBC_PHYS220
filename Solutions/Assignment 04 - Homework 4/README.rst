@@ -25,3 +25,8 @@ Problem 2 Sample Output:
 
 .. image:: https://github.com/ErickShepherd/UMBC_PHYS220/blob/master/Solutions/Assignment%2004%20-%20Homework%204/Sample%20Output/Problem%202.png
    :width: 40pt
+   
+Analysis:
+=========
+
+In figure 2, we see that for all 
