@@ -84,7 +84,7 @@ MCRT = MCRT_procedural
 #   results. 10,000 (1e5) is fairly reasonable for most purposes both in terms 
 #   of accuracy and runtime.
 #    - Erick Shepherd
-N_photons = 10000
+N_photons = 100000
 
 """
 Problem information:
@@ -135,6 +135,7 @@ def question1():
     plt.ylabel(ylabel, fontsize = "large")
     plt.xlim(COTs[0], COTs[-1])
     plt.ylim(0, 1)
+    plt.legend()
     plt.grid()
 
 """
@@ -166,7 +167,7 @@ def question2():
     #   The number of bins to use for the histogram. For a lower number of
     #   photons, I recommend using fewer bins.
     #    - Erick Shepherd
-    bins = 50
+    bins = 100
     
     plt.figure()
     
@@ -189,6 +190,7 @@ def question2():
     plt.xlabel(xlabel, fontsize = "large")
     plt.ylabel(ylabel, fontsize = "large")
     plt.xlim(0, COT)
+    plt.legend()
     plt.grid()
   
 # Test of solutions.
