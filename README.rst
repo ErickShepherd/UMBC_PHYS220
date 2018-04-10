@@ -4,6 +4,10 @@ Introduction to Computational Physics (PHYS 220)
 
 The GitHub repository for the University of Maryland, Baltimore County (UMBC) Introduction to Computational Physics (PHYS 220) course.
 
+For questions or concerns, E-mail **Erick Shepherd** at `ErickShepherd@UMBC.edu`_.
+
+.. _`ErickShepherd@UMBC.edu`: ErickShepherd@UMBC.edu
+
 Copyright
 =========
 
@@ -36,10 +40,10 @@ Assignment Solutions
 - `Homework 3 - Writing a random walk (Brownian motion) simulation using the Monte Carlo method`_
 - `Homework 4 - Writing a cloud radiative transfer simulation using the Monte Carlo method`_
 
-    .. _`Homework 1 - Basic Python exercises`: https://github.com/ErickShepherd/UMBC_PHYS220/tree/master/Solutions/Assignment%2001%20-%20Homework%201
+    .. _`Homework 1 - Basic Python exercises`: Solutions/Assignment%2001%20-%20Homework%201
     
-    .. _`Homework 2 - Basic numpy and matplotlib exercises`: https://github.com/ErickShepherd/UMBC_PHYS220/tree/master/Solutions/Assignment%2002%20-%20Homework%202
+    .. _`Homework 2 - Basic numpy and matplotlib exercises`: Solutions/Assignment%2002%20-%20Homework%202
     
-    .. _`Homework 3 - Writing a random walk (Brownian motion) simulation using the Monte Carlo method`: https://github.com/ErickShepherd/UMBC_PHYS220/tree/master/Solutions/Assignment%2003%20-%20Homework%203
+    .. _`Homework 3 - Writing a random walk (Brownian motion) simulation using the Monte Carlo method`: Solutions/Assignment%2003%20-%20Homework%203
     
-    .. _`Homework 4 - Writing a cloud radiative transfer simulation using the Monte Carlo method`: https://github.com/ErickShepherd/UMBC_PHYS220/tree/master/Solutions/Assignment%2004%20-%20Homework%204
+    .. _`Homework 4 - Writing a cloud radiative transfer simulation using the Monte Carlo method`: Solutions/Assignment%2004%20-%20Homework%204

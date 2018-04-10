@@ -4,7 +4,7 @@ Sample Output of Homework 1 Solutions
 
 The source code which produces these solutions may be found in HW1_Erick_Shepherd.py_.
 
-    .. _HW1_Erick_Shepherd.py: https://github.com/ErickShepherd/UMBC_PHYS220/blob/master/Solutions/Assignment%2001%20-%20Homework%201/HW1_Erick_Shepherd.py
+    .. _HW1_Erick_Shepherd.py: HW1_Erick_Shepherd.py
 
 Problem 1 Sample Output:
 ========================
