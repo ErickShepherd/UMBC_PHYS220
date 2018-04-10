@@ -2,7 +2,7 @@
 # coding=utf-8
 
 """
-Solutions to homework 4, PHYS 220, UMBC.
+Monte Carlo radiative transfer model, PHYS 220, UMBC.
 
 Course information:
 --------------------------------------------------------------------------------
@@ -18,13 +18,11 @@ Assignment information:
     Author:             Dr. Zhibo Zhang, Professor
     E-mail:             Zhibo.Zhang@UMBC.edu
     Date:               2017-01-30
-    Assignment:         03
-    Assignment name:    Homework 4
-    Available points:   100
-    Grade percentage:   5.71%
+    Assignments:        03, 04, 05, 06
+    Assignment names:   Homework 4, Midterm, Homework 5, Homework 6
     
-    Description:        Simulating radiative transfer in clouds using the Monte
-                        Carlo method.
+    Description:        A simulation of radiative transfer in clouds using the 
+                        Monte Carlo method.
     
 Solutions information:
 --------------------------------------------------------------------------------
@@ -41,18 +39,17 @@ Copyright information:
     
     This program is distributed in the hope that it will be useful for 
     educational purposes, but without any warranty; without even the implied 
-    warranty of merchantability or fitness for a particular purpose.
+    warranty of merchantability or fitness for a particular purpose. All of the
+    contents of this document are protected from copying under U.S. and 
+    international copyright laws and treatises. Any unauthorized copying, 
+    alteration, distribution, transmission, performance, display, or other use 
+    of this material is prohibited.
     
     The intended audience of the publication of this document is the students
     enrolled in the Introduction to Computational Physics (PHYS 220) course 
     taught Dr. Zhibo Zhang at the University of Maryland, Baltimore County 
     (UMBC). Use of the contents of this repository by students of UMBC is 
     restricted by the academic integrity policies and principles of UMBC.
-    
-    All of the contents of this document are protected from copying under U.S. 
-    and international copyright laws and treatises. Any unauthorized copying, 
-    alteration, distribution, transmission, performance, display, or other use 
-    of this material is prohibited.
 """
 
 # Future module imports for Python 2-3 compatibility.
@@ -61,6 +58,13 @@ from __future__ import division
 # Third party imports.
 import numpy as np
 import matplotlib.pyplot as plt
+
+# Author's note:
+#   The formulae used to determine the scattering length and angle, as well as
+#   the conditions for checking whether the photon was absorbed or scattered,
+#   may be found in the Monte_Carlo_RT.pptx document provided to you by Dr. 
+#   Zhang on the course Blackboard site.
+#    - Erick Shepherd
 
 # Author's note:
 #   This is the photon class for the object oriented programming (OOP) approach
@@ -305,3 +309,37 @@ def MCRT_procedural(COT, SSA, SZA, N_photons):
             "MDR reflected"   : MDR_reflected,
             "MDR absorbed"    : MDR_absorbed,
             "MDR transmitted" : MDR_transmitted}
+
+class LoadingBar:
+    
+    characters = ["|", "/", "-", "\\"]
+    
+    def __init__(self, N_iterations, task_name = None):
+        
+        self.N_iterations = N_iterations
+        self.task_name    = task_name
+        self.N_iterated   = 0
+        self.clicker      = 0
+    
+    def update(self, progress = 1):
+        
+        self.N_iterated += progress
+        self.clicker    += 1
+    
+        task       = self.task_name
+        percentage = int(self.N_iterated / self.N_iterations * 100)
+        completed  = "=" * (int(percentage) // 2)
+        incomplete = " " * (50 - len(completed))
+        character  = LoadingBar.characters[self.clicker % 4]
+        
+        output_fields = (task, completed, percentage, incomplete, character)
+        
+        if task != None:
+            output_string = "{} progress: [{}{}%{}] ({})"
+        else:
+            output_string = "[{}{}%{}] ({})"
+        
+        if self.N_iterations != self.N_iterated:
+            print(output_string.format(*output_fields), end = "\r", flush = True)
+        else:
+            print(output_string.format(*output_fields))
