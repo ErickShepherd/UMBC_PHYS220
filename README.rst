@@ -8,6 +8,22 @@ For questions or concerns, E-mail **Erick Shepherd** at `ErickShepherd@UMBC.edu`
 
 .. _`ErickShepherd@UMBC.edu`: ErickShepherd@UMBC.edu
 
+Assignment Solutions
+====================
+
+- `Homework 1 - Basic Python exercises`_
+- `Homework 2 - Basic numpy and matplotlib exercises`_
+- `Homework 3 - Writing a random walk (Brownian motion) simulation using the Monte Carlo method`_
+- `Homework 4 - Writing a cloud radiative transfer simulation using the Monte Carlo method`_
+
+    .. _`Homework 1 - Basic Python exercises`: Solutions/Assignment%2001%20-%20Homework%201
+    
+    .. _`Homework 2 - Basic numpy and matplotlib exercises`: Solutions/Assignment%2002%20-%20Homework%202
+    
+    .. _`Homework 3 - Writing a random walk (Brownian motion) simulation using the Monte Carlo method`: Solutions/Assignment%2003%20-%20Homework%203
+    
+    .. _`Homework 4 - Writing a cloud radiative transfer simulation using the Monte Carlo method`: Solutions/Assignment%2004%20-%20Homework%204
+
 Copyright
 =========
 
@@ -31,19 +47,3 @@ Copyright
     taught Dr. Zhibo Zhang at the University of Maryland, Baltimore County 
     (UMBC). Use of the contents of this repository by students of UMBC is 
     restricted by the academic integrity policies and principles of UMBC.
-
-Assignment Solutions
-====================
-
-- `Homework 1 - Basic Python exercises`_
-- `Homework 2 - Basic numpy and matplotlib exercises`_
-- `Homework 3 - Writing a random walk (Brownian motion) simulation using the Monte Carlo method`_
-- `Homework 4 - Writing a cloud radiative transfer simulation using the Monte Carlo method`_
-
-    .. _`Homework 1 - Basic Python exercises`: Solutions/Assignment%2001%20-%20Homework%201
-    
-    .. _`Homework 2 - Basic numpy and matplotlib exercises`: Solutions/Assignment%2002%20-%20Homework%202
-    
-    .. _`Homework 3 - Writing a random walk (Brownian motion) simulation using the Monte Carlo method`: Solutions/Assignment%2003%20-%20Homework%203
-    
-    .. _`Homework 4 - Writing a cloud radiative transfer simulation using the Monte Carlo method`: Solutions/Assignment%2004%20-%20Homework%204
