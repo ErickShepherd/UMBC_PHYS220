@@ -4,6 +4,10 @@ Introduction to Computational Physics (PHYS 220)
 
 The GitHub repository for the University of Maryland, Baltimore County (UMBC) Introduction to Computational Physics (PHYS 220) course.
 
+For questions or concerns, E-mail **Erick Shepherd** at `ErickShepherd@UMBC.edu`_.
+
+.. _`ErickShepherd@UMBC.edu`: ErickShepherd@UMBC.edu
+
 Copyright
 =========
 
