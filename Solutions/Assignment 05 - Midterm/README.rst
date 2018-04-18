@@ -97,5 +97,5 @@ Approach 2:
 Approach 3:
 -----------
 
-.. image:: Sample%20Output/Problem%203%2C%20Approach%202.png
+.. image:: Sample%20Output/Problem%203%2C%20Approach%203.png
    :width: 40pt
