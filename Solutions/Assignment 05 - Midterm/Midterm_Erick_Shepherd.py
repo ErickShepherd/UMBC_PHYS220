@@ -23,8 +23,8 @@ Assignment information:
     Available points:   100
     Grade percentage:   30%
     
-    Description:        Simulating radiative transfer in clouds using the Monte
-                        Carlo method.
+    Description:        Numerical integration using the Trapezoidal Rule and
+                        Simpson's Rule, and the applications thereof.
     
 Solutions information:
 --------------------------------------------------------------------------------
