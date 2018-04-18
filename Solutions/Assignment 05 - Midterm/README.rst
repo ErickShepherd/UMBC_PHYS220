@@ -85,17 +85,17 @@ Problem 3 Sample Output:
 Approach 1:
 -----------
 
-.. image:: Sample%20Output/Problem%203,%20Approach$201.png
+.. image:: Sample%20Output/Problem%203%2C%20Approach%201.png
    :width: 40pt
    
 Approach 2:
 -----------
 
-.. image:: Sample%20Output/Problem%203,%20Approach$202.png
+.. image:: Sample%20Output/Problem%203%2C%20Approach%202.png
    :width: 40pt
 
 Approach 3:
 -----------
 
-.. image:: Sample%20Output/Problem%203,%20Approach$203.png
+.. image:: Sample%20Output/Problem%203%2C%20Approach%202.png
    :width: 40pt
