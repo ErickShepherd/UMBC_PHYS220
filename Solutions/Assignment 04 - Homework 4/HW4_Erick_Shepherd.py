@@ -18,7 +18,7 @@ Assignment information:
     Author:             Dr. Zhibo Zhang, Professor
     E-mail:             Zhibo.Zhang@UMBC.edu
     Date:               2017-01-30
-    Assignment:         03
+    Assignment:         04
     Assignment name:    Homework 4
     Available points:   100
     Grade percentage:   5.71%
@@ -133,7 +133,7 @@ def question1():
     plt.title("Simulated with {:,} Photons".format(N_photons))
     plt.xlabel(xlabel, fontsize = "large")
     plt.ylabel(ylabel, fontsize = "large")
-    plt.xlim(COTs[0], COTs[-1])
+    plt.xlim(0, COTs[-1])
     plt.ylim(0, 1)
     plt.legend()
     plt.grid()
