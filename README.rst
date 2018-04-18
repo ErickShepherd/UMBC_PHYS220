@@ -15,6 +15,7 @@ Assignment Solutions
 - `Homework 2 - Basic numpy and matplotlib exercises`_
 - `Homework 3 - Writing a random walk (Brownian motion) simulation using the Monte Carlo method`_
 - `Homework 4 - Writing a cloud radiative transfer simulation using the Monte Carlo method`_
+- `Midterm - Numerical integration using the Trapezoidal Rule and Simpson's Rule`_
 
     .. _`Homework 1 - Basic Python exercises`: Solutions/Assignment%2001%20-%20Homework%201
     
@@ -23,6 +24,8 @@ Assignment Solutions
     .. _`Homework 3 - Writing a random walk (Brownian motion) simulation using the Monte Carlo method`: Solutions/Assignment%2003%20-%20Homework%203
     
     .. _`Homework 4 - Writing a cloud radiative transfer simulation using the Monte Carlo method`: Solutions/Assignment%2004%20-%20Homework%204
+    
+    .. _`Midterm - Numerical integration using the Trapezoidal Rule and Simpson's Rule`: Solutions/Assignment%2005%20-%20Midterm
 
 Copyright
 =========
