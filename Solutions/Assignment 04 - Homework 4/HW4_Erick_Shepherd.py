@@ -82,9 +82,9 @@ MCRT = MCRT_procedural
 #   Tweak it as needed to produce results in a reasonable time; however, do note
 #   that the larger a sample size is used, the less noise there is in the 
 #   results. 10,000 (1e5) is fairly reasonable for most purposes both in terms 
-#   of accuracy and runtime.
+#   of accuracy and runtime. I use 100,000 (1e6) for a higher quality image.
 #    - Erick Shepherd
-N_photons = 10000
+N_photons = 100000
 
 """
 Problem information:
@@ -108,7 +108,7 @@ def question1():
 
     COTs = np.linspace(0.1, 20, 50)
     SSAs = np.asarray([1.0, 0.9, 0.8])
-    SZA  = np.pi / 3
+    SZA  = 0
 
     plt.figure()
 
@@ -169,7 +169,7 @@ def question2():
     #   working with about 10,000 photons; 100 bins works better when working
     #   with 100,000 photons.
     #    - Erick Shepherd
-    bins = 50
+    bins = 100
     
     plt.figure()
     
