@@ -1,6 +1,6 @@
-=====================================
-Sample Output of Homework 5 Solutions
-=====================================
+==================================
+Sample Output of Midterm Solutions
+==================================
 
 The source code which produces these solutions may be found in Midterm_Erick_Shepherd.py_ and MCRT_Erick_Shepherd.py_.
 
