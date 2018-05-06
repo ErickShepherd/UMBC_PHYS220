@@ -17,6 +17,7 @@ Assignment Solutions
 - `Homework 4 - Writing a cloud radiative transfer simulation using the Monte Carlo method`_
 - `Midterm    - Numerical integration using the Trapezoidal Rule and Simpson's Rule`_
 - `Homework 5 - Root finding using Newton's method and the bisection method`_
+- `Homework 6 - Data fitting using interpolation methods`_
 
     .. _`Homework 1 - Basic Python exercises`: Solutions/Assignment%2001%20-%20Homework%201
     
@@ -29,6 +30,8 @@ Assignment Solutions
     .. _`Midterm    - Numerical integration using the Trapezoidal Rule and Simpson's Rule`: Solutions/Assignment%2005%20-%20Midterm
 
     .. _`Homework 5 - Root finding using Newton's method and the bisection method`: Solutions/Assignment%2006%20-%20Homework%205
+
+    .. _`Homework 6 - Data fitting using interpolation methods`: Solutions/Assignment%2007%20-%20Homework%206
 
 Copyright
 =========
