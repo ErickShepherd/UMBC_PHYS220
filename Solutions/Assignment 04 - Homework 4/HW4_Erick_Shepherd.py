@@ -55,7 +55,7 @@ Copyright information:
 """
 
 # Future module imports for Python 2-3 compatibility.
-from __future__ import division
+from __future__ import division, print_function
 
 # Third party imports.
 import matplotlib.pyplot as plt
@@ -84,7 +84,7 @@ MCRT = MCRT_procedural
 #   results. 10,000 (1e5) is fairly reasonable for most purposes both in terms 
 #   of accuracy and runtime. I use 100,000 (1e6) for a higher quality image.
 #    - Erick Shepherd
-N_photons = 100000
+N_photons = 10000
 
 """
 Problem information:

@@ -55,7 +55,7 @@ Copyright information:
 """
 
 # Future module imports for Python 2-3 compatibility.
-from __future__ import division
+from __future__ import division, print_function
 
 # Third party imports.
 import matplotlib.pyplot as plt
