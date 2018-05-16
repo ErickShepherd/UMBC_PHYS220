@@ -35,9 +35,9 @@ Assignment Solutions
 
     .. _`Homework 6      - Data fitting using interpolation methods`: Solutions/Assignment%2007%20-%20Homework%206
 
-    .. _`Homework 7      - Integration of ordinary differential equations (ODEs)`: Solutions/Assignment%2007%20-%20Homework%206
+    .. _`Homework 7      - Integration of ordinary differential equations (ODEs)`: Solutions/Assignment%2008%20-%20Homework%207
 
-    .. _`Final Project   - Projectile motion with air resistance`: Solutions/Assignment%2007%20-%20Homework%206
+    .. _`Final Project   - Projectile motion with air resistance`: Solutions/Assignment%2005%20-%20Final%20Project
 
 Copyright
 =========
