@@ -45,10 +45,10 @@ Problem 3 Sample Output:
 
     Problem 3:
 
-    The expectation value is <x_f> = 92.78 meters.
+    The expectation value is <x_f> = 92.58 meters.
 
     The probability of the ball landing within 1 meter of the expectation value is
-    0.0860 (8.60%).
+    0.0857 (8.57%).
 
 .. image:: Sample%20Output/Problem%203.png
    :width: 40pt
