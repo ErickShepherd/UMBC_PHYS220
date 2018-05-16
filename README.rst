@@ -11,27 +11,33 @@ For questions or concerns, E-mail **Erick Shepherd** at `ErickShepherd@UMBC.edu`
 Assignment Solutions
 ====================
 
-- `Homework 1 - Basic Python exercises`_
-- `Homework 2 - Basic numpy and matplotlib exercises`_
-- `Homework 3 - Writing a random walk (Brownian motion) simulation using the Monte Carlo method`_
-- `Homework 4 - Writing a cloud radiative transfer simulation using the Monte Carlo method`_
-- `Midterm    - Numerical integration using the Trapezoidal Rule and Simpson's Rule`_
-- `Homework 5 - Root finding using Newton's method and the bisection method`_
-- `Homework 6 - Data fitting using interpolation methods`_
+- `Homework 1      - Basic Python exercises`_
+- `Homework 2      - Basic numpy and matplotlib exercises`_
+- `Homework 3      - Writing a random walk (Brownian motion) simulation using the Monte Carlo method`_
+- `Homework 4      - Writing a cloud radiative transfer simulation using the Monte Carlo method`_
+- `Midterm Project - Numerical integration using the Trapezoidal Rule and Simpson's Rule`_
+- `Homework 5      - Root finding using Newton's method and the bisection method`_
+- `Homework 6      - Data fitting using interpolation methods`_
+- `Homework 7      - Integration of ordinary differential equations (ODEs)`_
+- `Final Project   - Projectile motion with air resistance`_
 
-    .. _`Homework 1 - Basic Python exercises`: Solutions/Assignment%2001%20-%20Homework%201
+    .. _`Homework 1      - Basic Python exercises`: Solutions/Assignment%2001%20-%20Homework%201
     
-    .. _`Homework 2 - Basic numpy and matplotlib exercises`: Solutions/Assignment%2002%20-%20Homework%202
+    .. _`Homework 2      - Basic numpy and matplotlib exercises`: Solutions/Assignment%2002%20-%20Homework%202
     
-    .. _`Homework 3 - Writing a random walk (Brownian motion) simulation using the Monte Carlo method`: Solutions/Assignment%2003%20-%20Homework%203
+    .. _`Homework 3      - Writing a random walk (Brownian motion) simulation using the Monte Carlo method`: Solutions/Assignment%2003%20-%20Homework%203
     
-    .. _`Homework 4 - Writing a cloud radiative transfer simulation using the Monte Carlo method`: Solutions/Assignment%2004%20-%20Homework%204
+    .. _`Homework 4      - Writing a cloud radiative transfer simulation using the Monte Carlo method`: Solutions/Assignment%2004%20-%20Homework%204
     
-    .. _`Midterm    - Numerical integration using the Trapezoidal Rule and Simpson's Rule`: Solutions/Assignment%2005%20-%20Midterm
+    .. _`Midterm Project - Numerical integration using the Trapezoidal Rule and Simpson's Rule`: Solutions/Assignment%2005%20-%20Midterm%20Project
 
-    .. _`Homework 5 - Root finding using Newton's method and the bisection method`: Solutions/Assignment%2006%20-%20Homework%205
+    .. _`Homework 5      - Root finding using Newton's method and the bisection method`: Solutions/Assignment%2006%20-%20Homework%205
 
-    .. _`Homework 6 - Data fitting using interpolation methods`: Solutions/Assignment%2007%20-%20Homework%206
+    .. _`Homework 6      - Data fitting using interpolation methods`: Solutions/Assignment%2007%20-%20Homework%206
+
+    .. _`Homework 7      - Integration of ordinary differential equations (ODEs)`: Solutions/Assignment%2007%20-%20Homework%206
+
+    .. _`Final Project   - Projectile motion with air resistance`: Solutions/Assignment%2007%20-%20Homework%206
 
 Copyright
 =========

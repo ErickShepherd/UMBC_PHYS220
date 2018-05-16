@@ -1,0 +1,27 @@
+--------------------------------------------------------------------------------
+
+Problem 1:
+
+The final horizontal position with air resistance is 92.99 meters.
+The final horizontal position without air resistance is 238.85 meters.
+
+--------------------------------------------------------------------------------
+
+Problem 2:
+
+The optimal elevation angle with air resistance is 37.86 degrees, which
+yields a distance of 93.10 meters.
+
+The optimal elevation angle without air resistance is 45.05 degrees, which
+yields a distance of 254.84 meters.
+
+--------------------------------------------------------------------------------
+
+Problem 3:
+
+The expectation value is <x_f> = 92.73 meters.
+
+The probability of the ball landing within 1 meter of the expectation value is
+0.08 (8.00%).
+
+--------------------------------------------------------------------------------

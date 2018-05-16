@@ -1,10 +1,10 @@
-==================================
-Sample Output of Midterm Solutions
-==================================
+==========================================
+Sample Output of Midterm Project Solutions
+==========================================
 
-The source code which produces these solutions may be found in Midterm_Erick_Shepherd.py_ and MCRT_Erick_Shepherd.py_.
+The source code which produces these solutions may be found in Midterm_Project_Erick_Shepherd.py_ and MCRT_Erick_Shepherd.py_.
 
-    .. _Midterm_Erick_Shepherd.py: Miterm_Erick_Shepherd.py
+    .. _Midterm_Project_Erick_Shepherd.py: Miterm_Project_Erick_Shepherd.py
     .. _MCRT_Erick_Shepherd.py: MCRT_Erick_Shepherd.py
 
 Problem 1 Sample Output:
