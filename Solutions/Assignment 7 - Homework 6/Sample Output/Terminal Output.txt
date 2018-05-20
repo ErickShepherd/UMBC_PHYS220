@@ -1,0 +1,11 @@
+Problem 3:
+
+Model formula: a * sin(b * t + c) + d
+
+Fitted variables:
+a = 8.360798319419402
+b = 0.273021194914633
+c = -0.13177364904162583
+d = 70.87883723238782
+
+Fitted formula = 8.36 * sin(0.27 * t + -0.13) + 70.88

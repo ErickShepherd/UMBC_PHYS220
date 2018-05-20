@@ -9,25 +9,58 @@ The source code which produces these solutions may be found in HW6_Erick_Shepher
 Problem 1 Sample Output:
 ========================
 
-.. image:: Sample%20Output/Problem%201.png
+Part 1:
+-------
+
+.. image:: Sample%20Output/Problem%201.1.png
+   :width: 40pt
+   
+Part 2:
+-------
+   
+.. image:: Sample%20Output/Problem%201.2.png
+   :width: 40pt
+   
+Part 3:
+-------
+   
+.. image:: Sample%20Output/Problem%201.3.png
    :width: 40pt
 
 Problem 2 Sample Output:
 ========================
 
-.. image:: Sample%20Output/Problem%202.png
+Part 1:
+-------
+
+.. image:: Sample%20Output/Problem%202.1.png
+   :width: 40pt
+   
+Part 2:
+-------
+   
+.. image:: Sample%20Output/Problem%202.2.png
+   :width: 40pt
+   
+Part 3:
+-------
+   
+.. image:: Sample%20Output/Problem%202.3.png
    :width: 40pt
     
 Problem 3 Sample Output:
 ========================
 ::
 
-    Problem 3:
-      Formula: f(x) = a * sin(b * t + c) + d
-        a = 8.36080113329
-        b = 0.273021403603
-        c = -0.404799367759
-        d = 70.8788387123
+    Model formula: a * sin(b * t + c) + d
+
+    Fitted variables:
+      a = 8.360798319419402
+      b = 0.273021194914633
+      c = -0.13177364904162583
+      d = 70.87883723238782
+
+    Fitted formula = 8.36 * sin(0.27 * t + -0.13) + 70.88
 
 .. image:: Sample%20Output/Problem%203.png
    :width: 40pt
