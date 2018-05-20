@@ -18,7 +18,7 @@ Assignment information:
     Author:             Dr. Zhibo Zhang, Professor
     E-mail:             Zhibo.Zhang@UMBC.edu
     Date:               2017-01-30
-    Assignment:         06
+    Assignment:         07
     Assignment name:    Homework 6
     Available points:   100
     Grade percentage:   5.71%
