@@ -77,7 +77,8 @@ Problem information:
     Weight:         0.909
     Percentage:     27.27%
     
-    Description:    
+    Description:    Model the free fall of a soccer ball using the Scipy ODEint
+                    function.
                     
                     See "Homework 7.pdf" for more information.
 """
@@ -182,7 +183,8 @@ Problem information:
     Weight:         0.909
     Percentage:     36.36%
     
-    Description:    
+    Description:    Model the decay of radioactive isotopes using Euler's method
+                    and the Scipy ODEint function.
                     
                     See "Homework 7.pdf" for more information.
 """
@@ -334,7 +336,9 @@ Problem information:
     Weight:         0.909
     Percentage:     36.36%
     
-    Description:    
+    Description:    Model undamped, underdamped, critically damped, and 
+                    overdamped harmonic oscillation using the Scipy ODEint
+                    function.
                     
                     See "Homework 7.pdf" for more information.
 """
