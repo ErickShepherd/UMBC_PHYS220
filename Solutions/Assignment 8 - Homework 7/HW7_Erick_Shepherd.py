@@ -89,7 +89,7 @@ g   = 9.807  # Earth's gravity constant. Unit(s): m / s^2
 
 # Properties of the golf ball:
 A   = 0.0379 # Cross-sectional area.     Unit(s): m^2
-m   = 0.043  # Mass.                     Unit(s): kg
+m   = 0.43   # Mass.                     Unit(s): kg
 C   = 0.25   # Drag coefficient.         Unit(s): (dimensionless)
 
 def gravitational_force():
@@ -122,7 +122,7 @@ def trajectory(y0, v0, rho):
     
     state_vector = [y0, v0]
     
-    t = np.linspace(0, 10, 1000)
+    t = np.linspace(0, 20, 2000)
     
     results = odeint(trajectory_tendency, state_vector, t, args = (rho,))
     

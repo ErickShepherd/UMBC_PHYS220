@@ -10,9 +10,7 @@ Problem 1 Sample Output:
 ========================
 ::
 
-    Problem 1:
-
-    The terminal velocity is -8.44 meters per second.
+    The terminal velocity is -26.69 meters per second.
     
 .. image:: Sample%20Output/Problem%201.png
    :width: 40pt
