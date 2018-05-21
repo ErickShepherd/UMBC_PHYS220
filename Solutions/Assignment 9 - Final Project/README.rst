@@ -2,11 +2,7 @@
 Sample Output of Final Project Solutions
 ========================================
 
-<<<<<<< HEAD
 The source code which produces these solutions will be uploaded after the due date.
-=======
-The source code which produces these solutions will be uploaded after the project due date.
->>>>>>> 0af9d449ffe73a4112bbb5e5f30730653a692985
 
 Problem 1 Sample Output:
 ========================
