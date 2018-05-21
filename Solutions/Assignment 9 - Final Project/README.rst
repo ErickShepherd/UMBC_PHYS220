@@ -2,7 +2,9 @@
 Sample Output of Final Project Solutions
 ========================================
 
-The source code which produces these solutions will be uploaded after the due date.
+The source code which produces these solutions may be found in Final_Project_Erick_Shepherd.py_.
+
+    .. _Final_Project_Erick_Shepherd.py: Final_Project_Erick_Shepherd.py
 
 Problem 1 Sample Output:
 ========================
@@ -49,7 +51,7 @@ Problem 3 Sample Output:
     The expectation value is <x_f> = 92.78 meters.
 
     The probability of the ball landing within 1 meter of the expectation value is
-    0.0804 (8.04%).
+    0.0833 (8.33%).
 
 .. image:: Sample%20Output/Problem%203.png
    :width: 40pt
