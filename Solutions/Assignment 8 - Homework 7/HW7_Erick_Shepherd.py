@@ -112,9 +112,8 @@ def net_acceleration(v, rho):
 
 def trajectory_tendency(state_vector, t, rho):
     
-    y = state_vector[0]
-    v = state_vector[1]
-    a = net_acceleration(v, rho)
+    y, v = state_vector
+    a    = net_acceleration(v, rho)
     
     return [v, a]
 
@@ -349,9 +348,8 @@ def angular_acceleration(theta, omega, omega0, xi):
 
 def oscillator_tendency(state_vector, t, omega0, xi):
     
-    theta = state_vector[0]
-    omega = state_vector[1]
-    alpha = angular_acceleration(theta, omega, omega0, xi)
+    theta, omega = state_vector
+    alpha        = angular_acceleration(theta, omega, omega0, xi)
     
     return [omega, alpha]
 
