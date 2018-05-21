@@ -2,9 +2,7 @@
 Sample Output of Final Project Solutions
 ========================================
 
-The source code which produces these solutions may be found in Final_Project_Erick_Shepherd.py_.
-
-    .. _Final_Project_Erick_Shepherd.py: Final_Project_Erick_Shepherd.py
+The source code which produces these solutions will be uploaded after the due date.
 
 Problem 1 Sample Output:
 ========================
@@ -15,7 +13,10 @@ Problem 1 Sample Output:
     The final horizontal position with air resistance is 92.99 meters.
     The final horizontal position without air resistance is 238.85 meters.
     
-.. image:: Sample%20Output/Problem%201.1.png
+.. image:: Sample%20Output/Problem%201.1.1.png
+   :width: 40pt
+   
+.. image:: Sample%20Output/Problem%201.1.2.png
    :width: 40pt
    
 .. image:: Sample%20Output/Problem%201.2.png
