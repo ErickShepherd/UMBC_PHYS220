@@ -2,9 +2,7 @@
 Sample Output of Final Project Solutions
 ========================================
 
-The source code which produces these solutions may be found in Final_Project_Erick_Shepherd.py_.
-
-    .. _Final_Project_Erick_Shepherd.py: Final_Project_Erick_Shepherd.py
+The source code which produces these solutions will be uploaded after the project due date.
 
 Problem 1 Sample Output:
 ========================
