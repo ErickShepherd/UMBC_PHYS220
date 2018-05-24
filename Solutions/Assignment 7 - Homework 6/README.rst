@@ -13,19 +13,16 @@ Part 1:
 -------
 
 .. image:: Sample%20Output/Problem%201.1.png
-   :width: 40pt
-   
+
 Part 2:
 -------
    
 .. image:: Sample%20Output/Problem%201.2.png
-   :width: 40pt
    
 Part 3:
 -------
    
 .. image:: Sample%20Output/Problem%201.3.png
-   :width: 40pt
 
 Problem 2 Sample Output:
 ========================
@@ -34,19 +31,16 @@ Part 1:
 -------
 
 .. image:: Sample%20Output/Problem%202.1.png
-   :width: 40pt
    
 Part 2:
 -------
    
 .. image:: Sample%20Output/Problem%202.2.png
-   :width: 40pt
    
 Part 3:
 -------
    
 .. image:: Sample%20Output/Problem%202.3.png
-   :width: 40pt
     
 Problem 3 Sample Output:
 ========================
@@ -63,4 +57,3 @@ Problem 3 Sample Output:
     Fitted formula = 8.36 * sin(0.27 * t + -0.13) + 70.88
 
 .. image:: Sample%20Output/Problem%203.png
-   :width: 40pt

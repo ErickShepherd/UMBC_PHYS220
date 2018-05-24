@@ -77,13 +77,11 @@ Integrals
 ---------
 
 .. image:: Sample%20Output/Problem%202.1.png
-   :width: 40pt
    
 Errors
 ------
 
 .. image:: Sample%20Output/Problem%202.2.png
-   :width: 40pt
     
 Problem 3 Sample Output:
 ========================
@@ -95,21 +93,16 @@ Approach 1:
 -----------
 
 .. image:: Sample%20Output/Problem%203%2C%20Approach%201.png
-   :width: 40pt
-   
+
 Approach 2:
 -----------
 
 .. image:: Sample%20Output/Problem%203%2C%20Approach%202.png
-   :width: 40pt
 
 Approach 3:
 -----------
 
 .. image:: Sample%20Output/Problem%203%2C%20Approach%203.png
-   :width: 40pt
    
 .. |Equation 1| image:: LaTeX/Problem%202%20Analytical%20Solution%201.png
-   :height: 40pt
 .. |Equation 2| image:: LaTeX/Problem%202%20Analytical%20Solution%202.png
-   :height: 40pt

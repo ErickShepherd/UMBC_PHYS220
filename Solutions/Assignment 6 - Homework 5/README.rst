@@ -16,7 +16,6 @@ Problem 1 Sample Output:
     Newton's  method converged to 47.12388980 after 3 steps.
 
 .. image:: Sample%20Output/Problem%201.png
-   :width: 40pt
 
 Problem 2 Sample Output:
 ========================
@@ -27,7 +26,6 @@ Problem 2 Sample Output:
     Root 2: alpha = 2.93853184, beta = 0.59999986.
 
 .. image:: Sample%20Output/Problem%202.png
-   :width: 40pt
     
 Problem 3 Sample Output:
 ========================

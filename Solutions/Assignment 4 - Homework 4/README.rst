@@ -14,7 +14,6 @@ Problem 1 Sample Output:
     Question 1 progress: [==================================================100%] (-)
 
 .. image:: Sample%20Output/Problem%201.png
-   :width: 40pt
     
 Problem 2 Sample Output:
 ========================
@@ -23,7 +22,6 @@ Problem 2 Sample Output:
     Question 2 progress: [==================================================100%] (|)
 
 .. image:: Sample%20Output/Problem%202.png
-   :width: 40pt
    
 Analysis:
 =========

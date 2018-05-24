@@ -10,13 +10,11 @@ Problem 1 Sample Output:
 ========================
 
 .. image:: Sample%20Output/Problem%201.png
-   :width: 40pt
     
 Problems 2 & 3 Sample Output:
 =============================
 
 .. image:: Sample%20Output/Problems%202%20%26%203.png
-   :width: 40pt
 
 Problems 4 & 5 Sample Output:
 =============================
@@ -25,10 +23,8 @@ Approach 1:
 -----------
 
 .. image:: Sample%20Output/Problems%204%20%26%205%2C%20Approach%201.png
-   :width: 40pt
    
 Approach 2:
 -----------
    
 .. image:: Sample%20Output/Problems%204%20%26%205%2C%20Approach%202.png
-   :width: 40pt

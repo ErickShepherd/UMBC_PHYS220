@@ -17,34 +17,28 @@ Problem 1, Exercise 2 Sample Output:
 ====================================
 
 .. image:: Sample%20Output/Problem%201.2.png
-   :width: 40pt
 
 Problem 1, Exercise 3 Sample Output:
 ====================================
 
 .. image:: Sample%20Output/Problem%201.3.png
-   :width: 40pt
 
 Problem 1, Exercise 4 Sample Output:
 ====================================
 
 .. image:: /Sample%20Output/Problem%201.4.png
-   :width: 40pt
 
 Problem 2 Sample Output:
 ========================
 
 .. image:: Sample%20Output/Problem%202.png
-   :width: 40pt
 
 Problem 3 Sample Output:
 ========================
 
 .. image:: Sample%20Output/Problem%203.png
-   :width: 40pt
 
 Problem 4 Sample Output:
 ========================
 
 .. image:: Sample%20Output/Problem%204.png
-   :width: 40pt

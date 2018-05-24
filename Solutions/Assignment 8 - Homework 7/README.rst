@@ -13,20 +13,13 @@ Problem 1 Sample Output:
     The terminal velocity is -26.69 meters per second.
     
 .. image:: Sample%20Output/Problem%201.png
-   :width: 40pt
-   
 
 Problem 2 Sample Output:
 ========================
 
 .. image:: Sample%20Output/Problem%202(a).1.png
-   :width: 40pt
-   
 .. image:: Sample%20Output/Problem%202(a).2.png
-   :width: 40pt
-   
 .. image:: Sample%20Output/Problem%202(b).png
-   :width: 40pt
    
 Analysis:
 ---------
@@ -51,4 +44,3 @@ Problem 3 Sample Output:
 ========================
 
 .. image:: Sample%20Output/Problem%203.png
-   :width: 40pt

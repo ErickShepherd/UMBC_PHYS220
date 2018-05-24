@@ -16,16 +16,9 @@ Problem 1 Sample Output:
     The final horizontal position without air resistance is 238.85 meters.
     
 .. image:: Sample%20Output/Problem%201.1.1.png
-   :width: 40pt
-   
 .. image:: Sample%20Output/Problem%201.1.2.png
-   :width: 40pt
-   
 .. image:: Sample%20Output/Problem%201.2.png
-   :width: 40pt
-   
 .. image:: Sample%20Output/Problem%201.3.png
-   :width: 40pt
 
 Problem 2 Sample Output:
 ========================
@@ -40,7 +33,6 @@ Problem 2 Sample Output:
     yields a distance of 254.84 meters.
     
 .. image:: Sample%20Output/Problem%202.png
-   :width: 40pt
     
 Problem 3 Sample Output:
 ========================
@@ -54,4 +46,3 @@ Problem 3 Sample Output:
     0.0833 (8.33%).
 
 .. image:: Sample%20Output/Problem%203.png
-   :width: 40pt
