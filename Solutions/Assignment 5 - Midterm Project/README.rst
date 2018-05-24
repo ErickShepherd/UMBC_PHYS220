@@ -110,6 +110,6 @@ Approach 3:
    :width: 40pt
    
 .. |Equation 1| image:: LaTeX/Problem%202%20Analytical%20Solution%201.png
-   :width: 40pt
+   :height: 40pt
 .. |Equation 2| image:: LaTeX/Problem%202%20Analytical%20Solution%202.png
-   :width: 40pt
+   :height: 40pt
