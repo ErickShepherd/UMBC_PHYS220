@@ -62,11 +62,11 @@ Problem 2 Sample Output:
 
 To compute the error of each method, we must also solve this problem analytically. We are given the following integral:
 
-|Equation 1|:height: 40pt
+|Equation 1|
 
 We can then substitute in known values an solve:
 
-|Equation 2|:height: 40pt
+|Equation 2|
 
 ::
 
@@ -110,4 +110,6 @@ Approach 3:
    :width: 40pt
    
 .. |Equation 1| image:: LaTeX/Problem%202%20Analytical%20Solution%201.png
+   :height: 40pt
 .. |Equation 2| image:: LaTeX/Problem%202%20Analytical%20Solution%202.png
+   :height: 40pt
