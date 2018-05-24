@@ -59,6 +59,13 @@ Problem 1 Sample Output:
 
 Problem 2 Sample Output:
 ========================
+
+To compute the error of each method, we must also solve this problem analytically.
+
+|Equation 1|
+
+|Equation 2|
+
 ::
 
     Trapezoidal method converged to 9.92 with a 0.54% error from the analytical solution 9.97 after 10 intervals.
@@ -99,3 +106,6 @@ Approach 3:
 
 .. image:: Sample%20Output/Problem%203%2C%20Approach%203.png
    :width: 40pt
+   
+.. |Equation 1| image:: LaTeX/Problem%202%20Analytical%20Solution%201.png
+.. |Equation 2| image:: LaTeX/Problem%202%20Analytical%20Solution%202.png
