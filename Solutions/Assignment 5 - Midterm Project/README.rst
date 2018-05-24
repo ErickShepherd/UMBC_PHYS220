@@ -64,7 +64,7 @@ To compute the error of each method, we must also solve this problem analyticall
 
 |Equation 1|
 
-We can then substitute in known values an solve:
+We can then substitute in known values and solve:
 
 |Equation 2|
 
