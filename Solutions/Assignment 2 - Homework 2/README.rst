@@ -26,7 +26,7 @@ Problem 1, Exercise 3 Sample Output:
 Problem 1, Exercise 4 Sample Output:
 ====================================
 
-.. image:: /Sample%20Output/Problem%201.4.png
+.. image:: Sample%20Output/Problem%201.4.png
 
 Problem 2 Sample Output:
 ========================
