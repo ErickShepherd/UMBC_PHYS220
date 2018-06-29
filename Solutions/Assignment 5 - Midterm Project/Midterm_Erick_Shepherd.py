@@ -193,7 +193,7 @@ def simps(func, a, b, N):
             A += 4 * func(a + (2 * i - 1) * h)
 
             if index < k.size - 1:
-                A += 2 * f(unca + 2 * i * h)
+                A += 2 * func(a + 2 * i * h)
                 
     A *= h / 3
         
