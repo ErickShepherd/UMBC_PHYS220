@@ -2,7 +2,7 @@
 # coding=utf-8
 
 """
-Solutions to the final project, PHYS 220, UMBC.
+Solutions to Homework 7, PHYS 220, UMBC.
 
 Course information:
 --------------------------------------------------------------------------------
